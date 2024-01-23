@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- left div with image -->
+  <div class="main">
+    <div class="left">
+
+        <div class="container">
+          <div class="card-1">
+            <div class="content">
+              <div class="row">
+                <span><img src="./images/favicon-32x32.png" alt=""></span>
+              </div>
+              <div class="row">
+                <div class="number">
+                  <p id="cardNumber">0000 0000 0000 0000</p>
+                </div>
+                <div class="bottom">
+                  <p id="cardName">azzam Kh</p>
+                  <p id="cardDate"><span id="cardMonth">00</span>/ <span id="cardYear">00</span></p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <div class="card-2">
+            <p id="cardCvc">000</p>
+          </div>
+        </div>
+      
+    </div>
+    <div class="right">
+      <div class="container">
+        <div class="form">
+          <form action="">
+            <div class="top">
+              <div class="row">
+                <label for="">CARDHOLDER NAME</label>
+              <br>
+              <input type="text" placeholder="enter your name" id="name">
+              <p></p>
+              </div>
+              <div class="row">
+                <label for="">CARD NUMBER</label>
+              <br>
+              <input type="text" placeholder="e.g. 1234 5678 9999 9999" id="Number">
+              <p></p>
+              </div>
+              
+              
+            </div>
+            <div class="bottom">
+              <div class="left">
+                <label for="">EXP DATE (MM/YY)</label>
+                
+                <input type="text" placeholder="Month" id="month">
+                <input type="text" placeholder="Year" id="year">
+                <p></p>
+              </div>
+              <div class="right">
+                <label for="">CVC</label>
+                
+                <input type="text" placeholder="e.g 123" id="cvc">
+              </div>
+
+            </div>
+            <div class="last">
+              <button>Confirm</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">ACE</a>.
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+
+</html>

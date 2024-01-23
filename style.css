@@ -1,0 +1,253 @@
+@import url("https://fonts.google.com/specimen/Space+Grotesk");
+
+/* reset all element */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    /* Linear gradient for active input border */
+    --gradient-start: hsl(249, 99%, 64%);
+    --gradient-end: hsl(278, 94%, 30%);
+
+    /* Red color for input errors */
+    --error-red: hsl(0, 100%, 66%);
+
+    /* Additional colors */
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 3%, 87%);
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+}
+
+body{
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+.main{
+    display: flex;
+    min-height: 100vh;
+    flex-wrap: nowrap;
+    height: 100%;
+}
+@media screen and (max-width: 839px) {
+    .main{
+        flex-wrap: wrap;
+        flex-direction: column;        
+    }
+}
+/* style left said */
+.main > .left{
+    background-image: url(./images/bg-main-desktop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100%;
+    padding: 10px;
+    flex-basis: 35%;
+    position: relative;
+}
+.main > .left .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+}
+.main > .left .container >div{
+    min-height: 200px;
+    min-width: 350px;
+    color: var(--white);
+}
+.main > .left .container .card-1{
+    margin-bottom: 40px;
+    background-image: url(./images/bg-card-front.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 7px;
+    padding: 15px;
+    color: var(--white);
+    position: absolute;
+    bottom: 50%; 
+    left: 55%;
+}
+.main > .left .container .card-1 .content{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    gap: 90px;
+}
+.main > .left .container .card-1 .content .row{
+    flex-basis: 60%;
+}
+.main > .left .container .card-1 .content .row:last-child{
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 20px;
+}
+.main > .left  .card-1 .content .row:last-child .number p{
+    text-align: center;
+    letter-spacing: .4rem;
+    font-size: 1.2rem;
+}
+.main > .left  .card-1 .content .row:last-child .bottom{
+    display: flex;
+    justify-content: space-between;
+
+}
+/* .main > .left .container .card-2 , .container .card-1{
+    -webkit-box-shadow: 3px 3px 23.5px -2px #464646;
+-moz-box-shadow: 3px 3px 23.5px -2px #464646;
+box-shadow: 3px 3px 23.5px -2px #464646;
+} */
+.main > .left .container .card-2{
+    background-image: url(./images/bg-card-back.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    position: absolute;
+    bottom: 30%; 
+    left: 70%;
+}
+.main > .left .container .card-2 p{
+position: absolute;
+left: 77%;
+top: 42.9%;
+}
+
+/* style right said */
+.main >.right{
+    flex-basis: 65%;
+    height: 100;
+}
+.main .right .container {
+    min-height: 100%;
+    display: grid;
+    place-content: center;
+    margin: 30px;
+}
+
+@media screen and (max-width: 1439px) {
+    .main .right .container {
+        display: flex; /* Change to flex display */
+        align-items: center; /* Vertical center alignment */
+        justify-content: flex-end; /* Horizontal end (right) alignment */
+        margin: 30px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .main > .left .container .card-1{
+        bottom: 50%; 
+        left: 25%;
+    }
+    .main > .left .container .card-2{
+        bottom: 30%; 
+        left: 40%;
+    }
+}
+@media screen and (max-width: 1050px) {
+    .main > .left .container .card-1 {
+        position: static; /* Reset to default positioning */
+    }
+    .main > .left .container .card-2 {
+        position: static; /* Reset to default positioning */
+    }
+    .main > .left .container .card-2 p {
+        position: absolute;
+        /* Adjust the positioning as necessary */
+        top: 70.5%; /* Example adjustment */
+        transform: translate(-50%, -50%); /* Center the paragraph */
+    }
+}
+.main .right .container .form{
+    margin-left: 50px;
+}
+.main .right .container .form form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+
+.main .right .container .form form .top{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.main .right .container .form form .top input{
+    padding: 10px;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 7px;
+}
+.right .form form .bottom{
+    display: flex;
+    
+    align-items: flex-start;
+    gap: 20px;
+   
+}
+.right .form form .bottom .right{
+    width: 50%;
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.right .form form .bottom {
+    display: flex;
+    
+}
+.right .form form .bottom .left {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns of equal width */
+    grid-template-rows: auto auto; /* Two rows, size as per content */
+    grid-gap: 10px; /* Optional: Adds gap between grid items */
+    flex-basis: 50%;
+    flex-wrap: nowrap;
+}
+
+.right .form form .bottom .left label {
+    grid-column: 1 / -1; /* Label spans across all columns */
+    text-align: left; /* Align label text to the left */
+}
+
+.right .form form .bottom .left input, .bottom .right input {
+    width: 100%; /* Makes inputs take full width of their respective columns */
+    padding: 10px;
+    font-size: 18px;
+}
+
+/* style the input */
+input{
+    border: 1px solid var(--light-grayish-violet);
+    border-radius: 6px;
+}
+input:focus{
+    border-color: var(--dark-grayish-violet);
+}
+.last{
+
+    width: 100%;
+}
+button{
+    width: 100%;
+    border-radius: 6px;
+    border: transparent;
+    padding: 15px 10px;
+    font-size: 20px;
+    background-color: var(--very-dark-violet);
+    color: var(--light-grayish-violet);
+}
